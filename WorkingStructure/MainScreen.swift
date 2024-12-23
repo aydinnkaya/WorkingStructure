@@ -8,12 +8,28 @@
 import UIKit
 
 class MainScreen: UIViewController {
-
+    @IBOutlet weak var labelMainScreen: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+        labelMainScreen.text = "Welcome"
+
+    }
+    
+    @IBAction func buttonDo(_ sender: Any) {
+        
+        labelMainScreen.text = "Welcome Aydın"
+
+    }
+    
+    @IBAction func buttonStart(_ sender: Any) {
+        
+        performSegue(withIdentifier:"transitionGameScreen", sender: nil)
+        
+    }
+    
+    
 
 }
 
