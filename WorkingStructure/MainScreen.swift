@@ -12,24 +12,34 @@ class MainScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         labelMainScreen.text = "Welcome"
-
+        
     }
     
     @IBAction func buttonDo(_ sender: Any) {
         
         labelMainScreen.text = "Welcome Aydın"
-
+        
     }
     
     @IBAction func buttonStart(_ sender: Any) {
         
-        performSegue(withIdentifier:"transitionGameScreen", sender: nil)
+        let car = Cars(name: "BMW", model: "M5", age: 2 , color: "Green")
+        performSegue(withIdentifier:"transitionGameScreen", sender: car)
         
     }
     
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "transitionGameScreen" {
+            if let data = sender as? Cars {
+                let trasntitonVC = segue.destination as? GameScreen
+                trasntitonVC?.car = data
+              //  trasntitonVC?.message = data.name
+            }
+        }
+    }
 }
 

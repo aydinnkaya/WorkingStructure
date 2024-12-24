@@ -10,9 +10,20 @@ import UIKit
 class GameScreen: UIViewController {
     @IBOutlet weak var labelGameScreen: UILabel!
     
+    var car: Cars?
+    var message : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        labelGameScreen.text = message
+        
+        if let c = car {
+            print("Cars : \(String(describing: c.name!))")
+            print("Cars : \(c.model!)")
+            print("Cars : \(String(describing: c.color!))")
+            print("Cars : \(String(describing: c.age!))")
+        }
         		
     }
     
