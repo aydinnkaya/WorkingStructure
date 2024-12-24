@@ -10,10 +10,25 @@ import UIKit
 class MainScreen: UIViewController {
     @IBOutlet weak var labelMainScreen: UILabel!
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { // ones
         super.viewDidLoad()
         
         labelMainScreen.text = "Welcome"
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { // Screen Each view
+
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    
         
     }
     
@@ -41,5 +56,20 @@ class MainScreen: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func buttonSearh(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func buttonAdd(_ sender: Any) {
+        
+    }
+    
+    @IBAction func buttonSave(_ sender: Any) {
+        
+    }
+    
 }
 

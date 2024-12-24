@@ -52,8 +52,29 @@
                     </view>
                     <navigationItem key="navigationItem" title="Main Screen" prompt="Description" id="X5H-Nc-2eA">
                         <barButtonItem key="backBarButtonItem" title=" back" id="Chf-he-U29"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="ktK-cz-cFn">
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <action selector="buttonSave:" destination="BYZ-38-t0r" id="wWm-EC-4JT"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="GiU-BD-9K5">
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="buttonSearh:" destination="BYZ-38-t0r" id="Eff-HN-IvF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="3uZ-1H-lMh">
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="buttonAdd:" destination="BYZ-38-t0r" id="0PT-XN-qOR"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonSearch" destination="X5H-Nc-2eA" id="b69-Wk-9YK"/>
                         <outlet property="labelMainScreen" destination="2q5-gX-Rv9" id="jOd-lT-Zi4"/>
                         <segue destination="VHW-kQ-BkQ" kind="show" identifier="transitionGameScreen" id="ehy-hp-ZrA"/>
                     </connections>
@@ -184,6 +205,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
